@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+#t2
+ps auxf |grep bash
