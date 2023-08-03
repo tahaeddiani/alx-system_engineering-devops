@@ -1,2 +1,2 @@
-#!/bin/bash
+#!/usr/bin/env bash
 netstat --tcp --udp --listening --programs --numeric
