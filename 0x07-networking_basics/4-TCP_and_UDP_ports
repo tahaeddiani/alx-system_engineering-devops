@@ -1,2 +1,3 @@
 #!/usr/bin/env bash
-netstat --tcp --udp --listening --programs --numeric
+#t5hz
+netstat -l --program
