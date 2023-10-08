@@ -1,0 +1,11 @@
+#!/bin/bash
+# t0
+
+apt-get update
+apt-get install -y nginx
+
+#echo "add_header X-Served-By $web-02;" | sudo tee -a /etc/nginx/sites-available/default
+
+sed -i '\%^\tlocation / {%a \\t\tadd_header X-Served-By $hostname;' /etc/nginx/sites-available/default
+
+sudo service nginx restart
