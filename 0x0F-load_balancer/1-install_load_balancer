@@ -2,7 +2,7 @@
 # t1
 
 apt-get update
-apt-get install haproxy
+apt-get install haproxy -y
 
 echo "
 frontend eyes
@@ -11,7 +11,7 @@ frontend eyes
 
 backend heart
     balance roundrobin
-    server 387178-web-01 100.25.19.136:80 check
-    server 387178-web-02 35.174.205.13:80 check
+    server 387178-web-01 100.26.250.121:80 check
+    server 387178-web-02 54.164.174.101:80 check
 " >> /etc/haproxy/haproxy.cfg
 service haproxy restart
